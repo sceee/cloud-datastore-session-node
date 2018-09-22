@@ -61,12 +61,17 @@ module.exports = function (session) {
       return callback(err);
     }
 
+    const sessExprTimestamp = (sess.cookie && sess.cookie.expires) ? sess.cookie.expires.getTime() : '';
+
     this.ds.save({
       key: this.ds.key(['Session', sid]),
       data: [{
         name: 'data',
         value: sessJson,
         excludeFromIndexes: true
+      }, {
+        name: 'expirationTimestamp',
+        value: sessExprTimestamp
       }]
     }, callback);
   };
