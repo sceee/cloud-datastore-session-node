@@ -19,7 +19,7 @@
     "url": "https://github.com/GoogleCloudPlatform/cloud-datastore-session-node.git"
   },
   "peerDependencies": {
-    "@google-cloud/datastore": "^0.6.0"
+    "@google-cloud/datastore": "^1.4.0"
   },
   "bugs": {
     "url": "https://github.com/GoogleCloudPlatform/cloud-datastore-session-node/issues"
@@ -46,7 +46,7 @@
     "test": "npm run lint && npm run cover"
   },
   "devDependencies": {
-    "@google-cloud/datastore": "0.6.0",
+    "@google-cloud/datastore": "^1.4.0",
     "express": "4.14.0",
     "express-session": "1.14.2",
     "mocha": "3.2.0",
